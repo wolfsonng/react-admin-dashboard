@@ -6,10 +6,25 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
+//import { fetchUsers } from "../../services/apiService";
+import React, { useState, useEffect } from "react";
 
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [users, setUsers] = useState([]);
+  //const [selectedRows, setSelectedRows] = useState({}); // Add this lin
+
+  // useEffect(() => {
+  // fetchUsers()
+  // .then((response) => {
+  // setUsers(response.data); // Axios wraps the response data under the 'data' key
+  //})
+  //.catch((error) => {
+  // Axios error handling
+  //  console.error("Error fetching data:", error.message);
+  //});
+  //}, []);
   const columns = [
     { field: "id", headerName: "ID" },
     {
